@@ -1,0 +1,8 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+event:
+    resource: "@AppBundle/Resources/config/routing.yml"
+    prefix:   /
+

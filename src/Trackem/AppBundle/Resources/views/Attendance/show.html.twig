@@ -1,0 +1,48 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Attendance</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Userattended</th>
+                <td>{{ entity.userAttended }}</td>
+            </tr>
+            <tr>
+                <th>Sessionattended</th>
+                <td>{{ entity.sessionAttended }}</td>
+            </tr>
+            <tr>
+                <th>Eventattended</th>
+                <td>{{ entity.eventAttended }}</td>
+            </tr>
+            <tr>
+                <th>Dateofattendance</th>
+                <td>{{ entity.dateOfAttendance|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Eligibleattendance</th>
+                <td>{{ entity.eligibleAttendance }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('attendance') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('attendance_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}
