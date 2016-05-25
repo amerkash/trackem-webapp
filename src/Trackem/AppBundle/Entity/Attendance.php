@@ -32,9 +32,9 @@ class Attendance
     /**
      * @var string
      *
-     * @ORM\Column(name="SessionAttended", type="string", length=255)
+     * @ORM\Column(name="ConferenceAttended", type="string", length=255)
      */
-    private $sessionAttended;
+    private $conferenceAttended;
 
     /**
      * @var string
@@ -92,26 +92,26 @@ class Attendance
     }
 
     /**
-     * Set sessionAttended
+     * Set conferenceAttended
      *
-     * @param string $sessionAttended
+     * @param string $conferenceAttended
      * @return Attendance
      */
-    public function setSessionAttended($sessionAttended)
+    public function setConferenceAttended($conferenceAttended)
     {
-        $this->sessionAttended = $sessionAttended;
+        $this->conferenceAttended = $conferenceAttended;
 
         return $this;
     }
 
     /**
-     * Get sessionAttended
+     * Get conferenceAttended
      *
      * @return string 
      */
-    public function getSessionAttended()
+    public function getConferenceAttended()
     {
-        return $this->sessionAttended;
+        return $this->conferenceAttended;
     }
 
     /**

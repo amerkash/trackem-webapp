@@ -16,7 +16,7 @@ class AttendanceType extends AbstractType
     {
         $builder
             ->add('userAttended')
-            ->add('sessionAttended')
+            ->add('conferenceAttended')
             ->add('eventAttended')
 //            ->add('dateOfAttendance')
             ->add('eligibleAttendance')

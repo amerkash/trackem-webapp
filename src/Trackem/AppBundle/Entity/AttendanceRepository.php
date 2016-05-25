@@ -13,7 +13,7 @@ use Doctrine\ORM\EntityRepository;
 class AttendanceRepository extends EntityRepository
 {
     // Find attendance given a session ID
-    public function findAttendanceWhereSession($sessionId) {
+    public function findAttendanceWhereConference($sessionId) {
 
         return $this->getEntityManager()->createQuery(
             '
@@ -69,8 +69,8 @@ class AttendanceRepository extends EntityRepository
             ->getResult();
     }
 
-    // Find valid attendance given a session ID, start and end dates
-    public function findAttendanceWhereSessionBetweenDates($sessionId, $startDate, $endDate) {
+    // Find valid attendance given a conference ID, start and end dates
+    public function findAttendanceWhereConferenceBetweenDates($conferenceId, $startDate, $endDate) {
 
         return $this->getEntityManager()->createQuery(
             '
@@ -79,7 +79,7 @@ class AttendanceRepository extends EntityRepository
                 FROM 
                     AppBundle:Attendance attendance
                 WHERE 
-                    attendance.sessionAttended= :sessionId
+                    attendance.conferenceAttended= :conferenceId
                     AND 
                     attendance.dateOfAttendance>= :startDate
                     AND 
@@ -88,14 +88,14 @@ class AttendanceRepository extends EntityRepository
                     attendance.dateOfAttendance
             '
         )
-            ->setParameter('sessionId', $sessionId)
+            ->setParameter('conferenceId', $conferenceId)
             ->setParameter('startDate', $startDate)
             ->setParameter('endDate', $endDate)
             ->getResult();
     }
 
-    // Find invalid attendance given a session ID, start and end dates
-    public function findAttendanceNotValid($sessionId, $startDate, $endDate) {
+    // Find invalid attendance given a conference ID, start and end dates
+    public function findAttendanceNotValid($conferenceId, $startDate, $endDate) {
 
         return $this->getEntityManager()->createQuery(
             '
@@ -104,7 +104,7 @@ class AttendanceRepository extends EntityRepository
                 FROM 
                     AppBundle:Attendance attendance
                 WHERE 
-                    attendance.sessionAttended= :sessionId
+                    attendance.conferenceAttended= :conferenceId
                     AND 
                     (attendance.dateOfAttendance<= :startDate
                     OR 
@@ -113,7 +113,7 @@ class AttendanceRepository extends EntityRepository
                     attendance.dateOfAttendance
             '
         )
-            ->setParameter('sessionId', $sessionId)
+            ->setParameter('conferenceId', $conferenceId)
             ->setParameter('startDate', $startDate)
             ->setParameter('endDate', $endDate)
             ->getResult();
