@@ -20,7 +20,7 @@ class UserType extends AbstractType
             ->add('emailAddress')
             ->add('password')
             ->add('phoneNumber')
-            ->add('dateCreated')
+//            ->add('dateCreated')
             ->add('lastLogin')
         ;
     }

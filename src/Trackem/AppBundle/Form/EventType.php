@@ -19,7 +19,7 @@ class EventType extends AbstractType
             ->add('number')
             ->add('capacity')
             ->add('members')
-            ->add('createdDate')
+//            ->add('createdDate')
             ->add('createdBy')
         ;
     }

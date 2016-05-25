@@ -18,7 +18,7 @@ class AttendanceType extends AbstractType
             ->add('userAttended')
             ->add('sessionAttended')
             ->add('eventAttended')
-            ->add('dateOfAttendance')
+//            ->add('dateOfAttendance')
             ->add('eligibleAttendance')
         ;
     }

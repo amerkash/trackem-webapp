@@ -19,6 +19,11 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/paragonie/random_compat" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ptachoire/cssembed" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/raulfraile/ladybug" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/raulfraile/ladybug-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/raulfraile/ladybug-installer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/raulfraile/ladybug-themes" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sensio/distribution-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sensio/framework-extra-bundle" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sensio/generator-bundle" />
@@ -65,6 +70,11 @@
           <root url="file://$MODULE_DIR$/vendor/monolog/monolog" />
           <root url="file://$MODULE_DIR$/vendor/paragonie/random_compat" />
           <root url="file://$MODULE_DIR$/vendor/psr/log" />
+          <root url="file://$MODULE_DIR$/vendor/ptachoire/cssembed" />
+          <root url="file://$MODULE_DIR$/vendor/raulfraile/ladybug" />
+          <root url="file://$MODULE_DIR$/vendor/raulfraile/ladybug-bundle" />
+          <root url="file://$MODULE_DIR$/vendor/raulfraile/ladybug-installer" />
+          <root url="file://$MODULE_DIR$/vendor/raulfraile/ladybug-themes" />
           <root url="file://$MODULE_DIR$/vendor/sensio/distribution-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sensio/framework-extra-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sensio/generator-bundle" />
@@ -97,6 +107,11 @@
           <root url="file://$MODULE_DIR$/vendor/monolog/monolog" />
           <root url="file://$MODULE_DIR$/vendor/paragonie/random_compat" />
           <root url="file://$MODULE_DIR$/vendor/psr/log" />
+          <root url="file://$MODULE_DIR$/vendor/ptachoire/cssembed" />
+          <root url="file://$MODULE_DIR$/vendor/raulfraile/ladybug" />
+          <root url="file://$MODULE_DIR$/vendor/raulfraile/ladybug-bundle" />
+          <root url="file://$MODULE_DIR$/vendor/raulfraile/ladybug-installer" />
+          <root url="file://$MODULE_DIR$/vendor/raulfraile/ladybug-themes" />
           <root url="file://$MODULE_DIR$/vendor/sensio/distribution-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sensio/framework-extra-bundle" />
           <root url="file://$MODULE_DIR$/vendor/sensio/generator-bundle" />

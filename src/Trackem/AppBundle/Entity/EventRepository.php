@@ -12,4 +12,46 @@ use Doctrine\ORM\EntityRepository;
  */
 class EventRepository extends EntityRepository
 {
+
+    // Find event by ID
+    public function findEvent($id) {
+
+        return $this->getEntityManager()->createQuery(
+            '
+                SELECT 
+                    event
+                FROM 
+                    AppBundle:Event event
+                WHERE 
+                    event.id = :id
+            '
+        )
+            ->setParameter('id', $id)
+            ->getResult();
+    }
+
+
+
+    // Find event given a the creator/user ID
+    public function findEventWhereCreator($userId) {
+
+        return $this->getEntityManager()->createQuery(
+            '
+                SELECT 
+                    event
+                FROM 
+                    AppBundle:Event event
+                WHERE 
+                    event.createdBy = :userId
+                ORDER BY 
+                    event.createdDate
+            '
+        )
+            ->setParameter('userId', $userId)
+            ->getResult();
+    }
+
+
+
+
 }

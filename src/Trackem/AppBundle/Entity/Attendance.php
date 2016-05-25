@@ -53,7 +53,7 @@ class Attendance
     /**
      * @var boolean
      *
-     * @ORM\Column(name="EligibleAttendance", type="boolean")
+     * @ORM\Column(name="EligibleAttendance", type="boolean", nullable=true)
      */
     private $eligibleAttendance;
 

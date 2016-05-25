@@ -30,6 +30,13 @@ class Event
     private $name;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="Password", type="string", length=255)
+     */
+    private $password;
+
+    /**
      * @var integer
      *
      * @ORM\Column(name="Number", type="integer")
@@ -46,7 +53,7 @@ class Event
     /**
      * @var integer
      *
-     * @ORM\Column(name="Members", type="integer")
+     * @ORM\Column(name="Members", type="integer", nullable=true)
      */
     private $members;
 
@@ -213,4 +220,26 @@ class Event
     {
         return $this->createdBy;
     }
+
+    /**
+     * Get password
+     *
+     * @return string
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * Set password
+     * 
+     * @param string $password
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    }
+
+
 }
