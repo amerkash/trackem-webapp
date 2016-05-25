@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table(name="attendance")
  * @ORM\Entity(repositoryClass="Trackem\AppBundle\Entity\AttendanceRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Attendance
 {
@@ -139,6 +140,7 @@ class Attendance
     /**
      * Set dateOfAttendance
      *
+     * @ORM\PrePersist
      * @return Attendance
      */
     public function setDateOfAttendance()

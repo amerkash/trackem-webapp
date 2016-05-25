@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="Trackem\AppBundle\Entity\UserRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class User
 {
@@ -198,7 +199,7 @@ class User
 
     /**
      * Set dateCreated
-     *
+     * @ORM\PrePersist
      * @return User
      */
     public function setDateCreated()

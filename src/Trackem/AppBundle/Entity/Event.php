@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table(name="event")
  * @ORM\Entity(repositoryClass="Trackem\AppBundle\Entity\EventRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Event
 {
@@ -168,7 +169,7 @@ class Event
 
     /**
      * Set createdDate
-     *
+     * @ORM\PrePersist
      * @return Event
      */
     public function setCreatedDate()
