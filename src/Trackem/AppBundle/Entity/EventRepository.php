@@ -16,18 +16,30 @@ class EventRepository extends EntityRepository
     // Find event by ID
     public function findEvent($id) {
 
-        return $this->getEntityManager()->createQuery(
-            '
-                SELECT 
-                    event
-                FROM 
-                    AppBundle:Event event
-                WHERE 
-                    event.id = :id
-            '
-        )
+
+        return $this
+            ->getEntityManager()
+            ->createQueryBuilder()
+            ->select('u')
+            ->from('AppBundle:Event', 'u')
+            ->where('u.id = :id')
             ->setParameter('id', $id)
+            ->getQuery()
             ->getResult();
+
+
+//        return $this->getEntityManager()->createQuery(
+//            '
+//                SELECT
+//                    event
+//                FROM
+//                    AppBundle:Event event
+//                WHERE
+//                    event.id = :id
+//            '
+//        )
+//            ->setParameter('id', $id)
+//            ->getResult();
     }
 
 

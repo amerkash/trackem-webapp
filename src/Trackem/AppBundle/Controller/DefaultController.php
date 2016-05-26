@@ -25,11 +25,11 @@ class DefaultController extends Controller
     public function indexAction()
     {
 
-        $repository = $this->getDoctrine()->getRepository('AppBundle:Conference');
-        $attendees = $repository->findConference('5');
+        $repository = $this->getDoctrine()->getRepository('AppBundle:User');
+        $users = $repository->findUserByEmail('amer.kachmar@live.com');
 
 
-        dump($attendees);
+        dump($users);
         die();
 
         return $this->render('AppBundle:Default:index.html.twig');
